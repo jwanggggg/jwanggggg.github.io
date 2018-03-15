@@ -2,13 +2,16 @@
 <html>
     <title>Jonathan Wang</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
     
     <style>
         html, body, h1, h2, h3, h4, h5, h6 {font-family: "Roboto", sans-serif}
     </style>
+    
+    
     
     <!-- Page container -->
     <div class = "w3-content w3-margin-top" style = "max-width: 1400px">
@@ -22,10 +25,11 @@
             <div class = "w3-white w3-text-grey w3-card-4">
             
                 <div class = "w3-display-container">
-                    <img width = "329px" height = "408px" src = "img/IMG_5726.JPG" style = "width = 100%">
+                    
+                    <img width = "330px" height = "450px" src = "/Users/jonathanwang/Downloads/Photos/img/IMG_5726.JPG" style = "width = 100%">
 
                     <div class="w3-container">
-                        <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Jonathan Wang</p>
+                        <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Software Developer</p>
                         <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>New York, NY</p>
                         <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>jw4107@nyu.edu</p>
                         <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>15517955735</p>
@@ -62,19 +66,56 @@
             <h2><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Professional Experience</h2>
                 
             <div class = "w3-container">
-                <h5><b>Information Technology Intern - Industrial and Commercial Bank of China</b></h5>
+                <h5><img id = "work_img" width = "95x" height = "75px" src = "/Users/jonathanwang/Downloads/Programming Projects/Personal Website/img/icbc.png"><b>Information Technology Intern - Industrial and Commercial Bank of China</b></h5>
+                
+                <!--    ICBC Modal     -->
+                <div id="icbcModal" class="modal">
+                    <!--     ICBC Modal Content       -->
+                    <div class="modal-content">
+                        <span class="close"></span>
+                        <p>Hello world! ICBC</p>
+                    </div>  
+                </div>
+                
+                <script>// Get the modal
+                    var modal = document.getElementById('icbcModal');
+
+                    // Get the button that opens the modal
+                    var img = document.getElementById("work_img");
+
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+
+                    // When the user clicks on the button, open the modal 
+                    img.onclick = function() {
+                        modal.style.display = "block";
+                    }
+
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function() {
+                        modal.style.display = "none";
+                    }
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                </script>
+                
                 <h6>July 2017 - August 2017</h6>
                 <p>Coded Python scripts to download and wrangle data for financial reports, and additionally overhauled and refurbished the bank's internal website and directory using HTML/CSS.</p>
             </div>
             <hr>
             <div class = "w3-container">
-                <h5><b>Summer Intern - Symrise AG</b></h5>
+                <h5><img id = "work_img" width = "95x" height = "75px" src = "/Users/jonathanwang/Downloads/Programming Projects/Personal Website/img/symrise.png"><b>Summer Intern - Symrise AG</b></h5>
                 <h6>June 2016 - August 2016</h6>
                 <p>Utilized Excel to construct a digital and physical archive of thousands of perfumes for fragrance companies Symrise supplies to, including L'Oreal, Head and Shoulders, and Yankee Candle.</p>
             </div>
             <hr>
             <div class = "w3-container">
-                <h5><b>Teaching Assistant - Peak Learning Center</b></h5>
+                <h5><img id = "work_img" width = "120x" height = "50px" src = "/Users/jonathanwang/Downloads/Programming Projects/Personal Website/img/peak.png"><b>Teaching Assistant - Peak Learning Center</b></h5>
                 <h6>June 2015 - August 2015</h6>
                 <p>Administered and graded mock standardized tests to high school students preparing for SATs and ACTs. Also aided senior instructors in crafting strategies and lesson plans for students.</p>
             </div>
