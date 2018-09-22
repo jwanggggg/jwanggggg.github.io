@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <title>Jonathan Wang</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" type="text/css" href="indexPersonal.css">
   </head>
   <body>
-    <p><a name="linkToHome"></a>.</a></p>
-    <div class="menu">
-      <ul class="navbar">
-        <li><a href="#linkToHome">Home</a></li>
-        <li><a href="#linkToAbout">About</a></li>
-        <li><a href="#linkToEducation">Education</a></li>
-        <li><a href="#linkToWork">Work Experience</a></li>
-        <!-- <li><a name="linkToMusic">Music</a></li> -->
-        <li><a href="img/Resume Senior Fall.pdf" target="_blank">Download CV</a></li>
-      </ul>
-    </div>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" a href="#linkToAbout">About <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" a href="#linkToEducation">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" a href="#linkToWork">Work Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" a href="img/Resume Senior Fall.pdf" target="_blank">Download CV</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
     <div class="background"></div>
       <div class="container">
         <h1>Jonathan Wang</h1>
@@ -25,217 +41,165 @@
         York University majoring in Computer Science and minoring in Economics.</p>
 
         <h2><a name="linkToEducation">Education</a></h2>
-        <img id="nyuImg" class="education" src="img/nyu.jpg">
-        <img id="deImg" class="education" src="img/de.png">
+        <img id="nyuImg" class="education" src="img/nyu.jpg" data-toggle="modal" data-target="#nyuModal">
+        <img id="deImg" class="education" src="img/de.png" data-toggle="modal" data-target="#deModal">
+
+        <br></br>
 
         <h2><a name="linkToWork">Work Experience</a></h2>
-        <img id="amnhImg" class="work" src="img/amnhLong.png">
-        <img id="courantImg" class="work" src="img/courant.jpg">
-        <img id="icbcImg" class="work" src="img/icbc.jpeg">
+        <img id="amnhImg" class="work" src="img/amnhLong.png" data-toggle="modal" data-target="#amnhModal">
+        <img id="courantImg" class="work" src="img/courant.jpg" data-toggle="modal" data-target="#courantModal">
+        <img id="icbcImg" class="work" src="img/icbc.jpeg" data-toggle="modal" data-target="#icbcModal">
 
         <hr></hr>
         <h2>Contact</h2>
         <p>For business inquiries, email me at jw4107@nyu.edu.</p>
 
         <!-- The Modals -->
-        <div id="nyuModal" class="modal">
-
-          <!-- Modal content -->
-          <div class="modal-content">
-            <div class="modal-header">
-              <span class="close">&times;</span>
-              <h2 class="modal-title">New York University</h2>
-            </div>
-            <div class="modal-body">
-              <h3>Bachelor of Arts in Computer Science, Minor in Economics</h3>
-              <h3>Class of 2019</h3>
-              <img class="campus" src="img/nyuCampus.jpg">
-              <h4>Coursework</h4>
-              <p>Introduction to Computer Science</p>
-              <p>Data Structures</p>
-              <p>Basic Algorithms</p>
-              <p>Computer Systems Organization</p>
-              <p>Discrete Mathematics</p>
-              <p>Data Analysis with Python</p>
-              <p>Artificial Intelligence</p>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- The Modal -->
-        <div id="deModal" class="modal">
-
-          <!-- Modal content -->
-          <div class="modal-content">
-            <div class="modal-header">
-              <span class="close">&times;</span>
-              <h2 class="modal-title">Dwight-Englewood Private High School</h2>
-            </div>
-            <div class="modal-body">
-              <h3>High School Diploma, Class of 2015</h3>
-              <img class="campus" src="img/deCampus.jpeg" alt="deCampus">
-              <h3>Activities and Societies</h3>
-              <p>Chinese Culture Club - President</p>
-              <p>Jazz Rock Band - Lead Vocalist</p>
-              <p>AIDS Awareness Club - Vice President</p>
-            </div>
-
-          </div>
-
-        </div>
-
-        <div id="amnhModal" class="modal">
-
-          <!-- Modal content -->
-          <div class="modal-content">
-            <div class="modal-header">
-              <span class="close">&times;</span>
-              <h2 class="modal-title">American Museum of Natural History</h2>
-            </div>
-            <div class="modal-body">
-              <h3>Software Development Intern</h3>
-              <h3>June 2018 - August 2018</h3>
-              <img class="campus" src="img/amnhJob.jpg" alt="amnhJob">
-              <p>In my junior year summer, I had the opportunity
-                to intern at the American Museum of Natural History, where I worked
-                on the museum's upcoming latest interactive exhibits, Unseen
-                Oceans and Mythic Creatures. There, I collaborated with
-                the lead animator by using Java, Processing and Unity to create
-                motion depth-sensing software for humans
-                to interact with fish and dinosaurs on-screen.
-                <br></br>
-                Additionally, I used C# to construct a
-                translatable backend component for all the museum's current and
-                future exhibits. As AMNH's exhibits begin to support multiple
-                languages, translators need to be able to quickly and easily
-                translate copious amounts of captions. The application I
-                developed enables translators with no programming experience
-                to quickly translate, format, and ship convoluted JSON files and
-                update them accordingly in Unity without ever opening Unity itself.
-                </p>
+        <div class="modals">
+          <!-- NYU Modal -->
+          <div class="modal fade" id="nyuModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="nyuModalLabel">New York University - Class of 2019</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h6>Bachelor of Arts in Computer Science</h6>
+                  <h6>Minor in Economics</h6>
+                  <img class="campus" src="img/nyuCampus.jpg">
+                  <h6>Coursework</h6>
+                  <p>Introduction to Computer Science</p>
+                  <p>Data Structures</p>
+                  <p>Basic Algorithms</p>
+                  <p>Computer Systems Organization</p>
+                  <p>Discrete Mathematics</p>
+                  <p>Data Analysis with Python</p>
+                  <p>Natural Language Processing</p>
+                </div>
+              </div>
             </div>
           </div>
 
-        </div>
-
-        <div id="courantModal" class="modal">
-
-          <!-- Modal content -->
-          <div class="modal-content">
-            <div class="modal-header">
-              <span class="close">&times;</span>
-              <h2 class="modal-title">NYU Courant - Computer Science Department</h2>
-            </div>
-            <div class="modal-body">
-              <h3>University Tutor</h3>
-              <h3>August 2018 - Present</h3>
-              <img class="campus" src="img/tutors.jpg" alt="tutors">
-              <p>Tutored CSCI-UA 101, Introduction to Computer Science, NYU's
-                introductory Java course.
-                <br></br>
-                The course encompasses a wide array of
-                material, including basic data structures, Processing, and
-                the object-oriented paradigm.
-               </p>
+          <!-- DE Modal -->
+          <div class="modal fade" id="deModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="deModalLabel">Dwight-Englewood Private High School - Class of 2015</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h6>High School Diploma</h6>
+                  <img class="campus" src="img/deCampus.jpeg">
+                  <p>Chinese Culture Club - President</p>
+                  <p>Jazz Rock Band - Lead Vocalist</p>
+                  <p>AIDS Awareness Club - Vice President</p>
+                </div>
+              </div>
             </div>
           </div>
 
-        </div>
-
-        <div id="icbcModal" class="modal">
-
-          <!-- Modal content -->
-          <div class="modal-content">
-            <div class="modal-header">
-              <span class="close">&times;</span>
-              <h2 class="modal-title">Industrial and Commercial Bank of China</h2>
-            </div>
-            <div class="modal-body">
-              <h3>Information Technology Intern</h3>
-              <h3>July 2017 - August 2017</h3>
-              <img class="campus" src="img/icbcBuilding.jpg" alt="icbcBuilding">
-              <p>In the summer of my sophomore year, I worked as an Information
-              Technology Intern at ICBC New York. There, I refurbished the company
-              website using HTML/CSS and JavaScript and also implemented a
-              searchable employee directory.
-              <br></br>
-              Employees at ICBC are required to fill out daily financial reports.
-              To assist them, I created Python scripts that automatically
-              download, organize, and complete these forms for them.
-            </p>
+          <!-- AMNH Modal -->
+          <div class="modal fade" id="amnhModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="amnhModalLabel">American Museum of Natural History</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h6>Software Development Intern</h6>
+                  <h6>June 2018 - August 2018</h6>
+                  <img class="campus" src="img/amnhJob.jpg">
+                  <p>In my junior year summer, I had the opportunity
+                    to intern at the American Museum of Natural History, where I worked
+                    on the museum's upcoming latest interactive exhibits, Unseen
+                    Oceans and Mythic Creatures. There, I collaborated with
+                    the lead animator by using Java, Processing and Unity to create
+                    motion depth-sensing software for humans
+                    to interact with fish and dinosaurs on-screen.
+                    <br></br>
+                    Additionally, I used C# to construct a
+                    translatable backend component for all the museum's current and
+                    future exhibits. As AMNH's exhibits begin to support multiple
+                    languages, translators need to be able to quickly and easily
+                    translate copious amounts of captions. The application I
+                    developed enables translators with no programming experience
+                    to quickly translate, format, and ship convoluted JSON files and
+                    update them accordingly in Unity without ever opening Unity itself.
+                    </p>
+                </div>
+              </div>
             </div>
           </div>
 
+          <!-- Courant Modal -->
+          <div class="modal fade" id="courantModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="courantModalLabel">NYU Courant - Computer Science Department</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h6>Computer Science Tutor</h6>
+                  <h6>August 2018 - Present</h6>
+                  <img class="campus" src="img/tutors.jpg">
+                  <p>Tutored CSCI-UA 101, Introduction to Computer Science, NYU's
+                  introductory Object-Oriented Java Programming course.
+                  <br></br>
+                  The course encompasses a wide array of
+                  material, including basic data structures, Processing, and
+                  the object-oriented paradigm.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ICBC Modal -->
+          <div class="modal fade" id="icbcModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="icbcModalLabel">Industrial and Commercial Bank of China</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h6>Information Technology Intern</h6>
+                  <h6>July 2017 - August 2017</h6>
+                  <img class="campus" src="img/icbcBuilding.jpg">
+                  <p>In the summer of my sophomore year, I worked as an Information
+                  Technology Intern at ICBC New York. There, I refurbished the company
+                  website using HTML/CSS and JavaScript and also implemented a
+                  searchable employee directory.
+                  <br></br>
+                  Employees at ICBC are required to fill out daily financial reports.
+                  To assist them, I created Python scripts that automatically
+                  download, organize, and complete these forms for them.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <script>
-          // NYU Modal
-          let nyuModal = document.getElementById('nyuModal');
-          let nyuImg = document.getElementById('nyuImg');
-          let nyuSpan = document.getElementsByClassName("close")[0];
-
-          nyuImg.onclick = function(){
-              nyuModal.style.display = "block";
-          }
-
-          // When the user clicks on <span> (x), close the modal
-          nyuSpan.onclick = function() {
-              nyuModal.style.display = "none";
-          }
-
-          // DE Modal
-          let deModal = document.getElementById('deModal');
-          let deImg = document.getElementById('deImg');
-          let deSpan = document.getElementsByClassName("close")[1];
-
-          deImg.onclick = function() {
-              deModal.style.display = "block";
-          }
-
-          deSpan.onclick = function() {
-              deModal.style.display = "none";
-          }
-
-          let amnhModal = document.getElementById('amnhModal');
-          let amnhImg = document.getElementById('amnhImg');
-          let amnhSpan = document.getElementsByClassName('close')[2];
-
-          amnhImg.onclick = function() {
-              amnhModal.style.display = "block";
-          }
-
-          amnhSpan.onclick = function() {
-              amnhModal.style.display = "none";
-          }
-
-          let courantModal = document.getElementById('courantModal');
-          let courantImg = document.getElementById('courantImg');
-          let courantSpan = document.getElementsByClassName('close')[3];
-
-          courantImg.onclick = function() {
-              courantModal.style.display = "block";
-          }
-
-          courantSpan.onclick = function() {
-              courantModal.style.display = "none";
-          }
-
-          let icbcModal = document.getElementById('icbcModal');
-          let icbcImg = document.getElementById('icbcImg');
-          let icbcSpan = document.getElementsByClassName('close')[4];
-
-          icbcImg.onclick = function() {
-              icbcModal.style.display = "block";
-          }
-
-          icbcSpan.onclick = function() {
-              icbcModal.style.display = "none";
-          }
-
-        </script>
 
       </div>
+
+      <div class="musicBackground"></div>
 
       <div class="footer">
         <a href="https://www.facebook.com/WangJFizzzzzzz" target="_blank"><img class="social" src="img/facebook.png"></a>
